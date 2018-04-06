@@ -5,7 +5,7 @@
 export CURRENT_PROJECT="blog"
 
 # Path to your oh-my-zsh installation.
-export ZSH=/home/wes/.oh-my-zsh
+export ZSH=/home/rwg/.oh-my-zsh
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -45,7 +45,7 @@ ZSH_THEME="robbyrussell"
 # Uncomment the following line if you want to change the command execution time
 # stamp shown in the history command output.
 # The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
- HIST_STAMPS="mm/dd/yyyy"
+ HIST_STAMPS="yyyy/mm/dd"
 
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
@@ -54,7 +54,8 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(zsh-256color, git, autopep8, celery, colorize, debian, ng, django, github, heroku, jsontools, postgres, shrink-path, tmux, ubuntu)
+### plugins=(zsh-256color, git, autopep8, celery, colorize, debian, ng, django, github, heroku, jsontools, postgres, shrink-path, tmux, ubuntu)
+plugins=(zsh-256color, git, github, postgres, tmux, ubuntu)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -122,12 +123,13 @@ alias editvimrc="vim ~/dotfiles/.vimrc"
 alias edittmux="vim ~/dotfiles/tmux.config"
 
 # heroku stuff
-alias hl="heroku login"
+### alias hl="heroku login"
 
 # vps stuff
-alias finnegan="ssh root@$FINNEGAN_VPS"
+### alias finnegan="ssh root@$FINNEGAN_VPS"
 
-source virtualenvwrapper.sh
-export PROJECT_HOME=/home/wes/projects
-export GOPATH=$HOME/Go
+### source virtualenvwrapper.sh
+export PROJECT_HOME=/home/rwg/projects
+export GOPATH=$HOME/go
 export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
+
