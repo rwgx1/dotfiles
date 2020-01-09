@@ -55,7 +55,8 @@ ZSH_THEME="robbyrussell"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 ### plugins=(zsh-256color, git, autopep8, celery, colorize, debian, ng, django, github, heroku, jsontools, postgres, shrink-path, tmux, ubuntu)
-plugins=(zsh-256color git github postgres tmux docker web-search ubuntu)
+###plugins=(zsh-256color git github postgres tmux docker web-search ubuntu)
+plugins=(git github postgres tmux docker web-search ubuntu)
 # plugins=(git extract web-search yum git-extras docker vagrant)
 source $ZSH/oh-my-zsh.sh
 
@@ -132,4 +133,5 @@ alias edittmux="vim ~/dotfiles/tmux.config"
 export PROJECT_HOME=/home/rwg/projects
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
+[[ "$TERM" == "xterm" ]] && export TERM=xterm-256color
 

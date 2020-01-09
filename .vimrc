@@ -7,36 +7,36 @@ syntax on
 
 " Vundle begins here; turn off filetype temporarily
 " set the runtime path to include Vundle and initialize
-filetype off
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+"filetype off
+"set rtp+=~/.vim/bundle/Vundle.vim
+" call vundle#begin()
 
 " plugins
-Plugin 'scrooloose/nerdtree'
-Plugin 'scrooloose/syntastic'
-Plugin 'tpope/vim-surround'
-Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'christoomey/vim-tmux-navigator'
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
-Plugin 'scrooloose/nerdcommenter'
-Plugin 'tpope/vim-repeat'
-Plugin 'tpope/vim-markdown'
-Plugin 'flazz/vim-colorschemes'
-Plugin 'nvie/vim-flake8'
-Plugin 'bronson/vim-trailing-whitespace'
-Plugin 'leafgarland/typescript-vim'
-Plugin 'othree/javascript-libraries-syntax.vim'
-Plugin 'pangloss/vim-javascript'
+"Plugin 'scrooloose/nerdtree'
+"Plugin 'scrooloose/syntastic'
+"Plugin 'tpope/vim-surround'
+"Plugin 'ctrlpvim/ctrlp.vim'
+"Plugin 'christoomey/vim-tmux-navigator'
+"Plugin 'vim-airline/vim-airline'
+"Plugin 'vim-airline/vim-airline-themes'
+"Plugin 'scrooloose/nerdcommenter'
+"Plugin 'tpope/vim-repeat'
+"Plugin 'tpope/vim-markdown'
+"Plugin 'flazz/vim-colorschemes'
+"Plugin 'nvie/vim-flake8'
+"Plugin 'bronson/vim-trailing-whitespace'
+"Plugin 'leafgarland/typescript-vim'
+"Plugin 'othree/javascript-libraries-syntax.vim'
+"Plugin 'pangloss/vim-javascript'
 
 " let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
+"Plugin 'VundleVim/Vundle.vim'
 
-call vundle#end()
-filetype plugin indent on
+"call vundle#end()
+"filetype plugin indent on
 
 set term=screen-256color
-colorscheme PaperColor
+"colorscheme PaperColor
 
 
 let python_highlight_all=1
@@ -56,7 +56,7 @@ set noswapfile
 set novb
 set nowrap
 set number
-set relativenumber
+" set relativenumber
 set ruler
 set scrolloff=5
 set showmatch
