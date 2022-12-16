@@ -1,0 +1,11 @@
+"\e[A": history-search-backward
+"\e[B": history-search-forward
+#"\e[C": forward-char
+#"\e[D": backward-chari
+
+# https://github.com/robertbyers1111/bash/blob/main/magic-space.txt
+# file !*_ (hit <space>, !* is replaced with the proper values!)
+$if Bash
+  Space: magic-space
+$endif
+
