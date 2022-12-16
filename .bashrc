@@ -1,4 +1,7 @@
 #!/bin/bash
+
+[[ $- == *i* ]] || return
+
 iatest=$(expr index "$-" i)
 
 #######################################################
@@ -195,6 +198,37 @@ alias logs="sudo find /var/log -type f -exec file {} \; | grep 'text' | cut -d' 
 alias sha1='openssl sha1'
 
 alias clickpaste='sleep 3; xdotool type "$(xclip -o -selection clipboard)"'
+
+
+
+# --- RwG ---
+
+# https://superuser.com/questions/575479/bash-history-truncated-to-500-lines-on-each-login
+###HISTFILE=~/.history  # https://www.soberkoder.com/unlimited-bash-history/
+# Keep around sixteen million lines of history in file
+HISTFILESIZE=$((1 << 24))
+# Keep around four thousand lines of history in memory
+HISTSIZE=$((1 << 12))
+# Ignore duplicate commands and whitespace in history
+###HISTCONTROL=ignoreboth:erasedups
+###HISTIGNORE="ls -lrt:ll:cd"
+# Keep the times of the commands in history
+# HISTTIMEFORMAT='%F %T  '
+HISTTIMEFORMAT="[$(tput setaf 6)%F %T$(tput sgr0)]: " # colorful date
+
+#+++ or put in .inputrc
+# https://mhoffman.github.io/2015/05/21/how-to-navigate-directories-with-the-shell.html
+bind '"\e[A":history-search-backward'
+bind '"\e[B":history-search-forward'
+#---
+
+[ -f ~/.functions.d/sshuttle.bash ] && source ~/.functions.d/sshuttle.bash
+[ -f ~/.functions.d/sshdmc.bash ] && source ~/.functions.d/sshdmc.bash
+
+
+# [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+ 
+# --- RwG ---
 
 #######################################################
 # SPECIAL FUNCTIONS
